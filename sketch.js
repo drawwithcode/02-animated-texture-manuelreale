@@ -108,8 +108,8 @@ class CagedBubble {
     this.yC2=this.yC;
     this.rC2=this.rC;
     this.roC=0;
-    this.timer=2000;
-    this.timer2=2000;
+    this.timer=5000;
+
 
   }
 
@@ -128,7 +128,6 @@ class CagedBubble {
       if(this.roC<0){this.roC++}
 
 
-
       this.dist=dist(mouseX,mouseY,this.xC,this.yC);
       if(this.dist<50){this.dist=50}
       if(this.dist>400){this.dist=400}
@@ -139,12 +138,13 @@ class CagedBubble {
       this.xC2=this.xC+(random(-200,200)/(this.dist));
       this.yC2=this.yC+(random(-200,200)/(this.dist));
 
-      if(this.timer<2000){
+      if(this.timer<5000){
         //console.log(this.timer)
         this.timer+=20;
         if(this.wave<100+this.timer){if(this.roC<30){this.roC+=10;}}
         if(this.wave<50+this.timer){this.roC-=11;}
-        if(this.wave>3000+this.timer){this.roC-=10;}
+        if(this.wave>30000+this.timer){this.roC-=10;}
+        if(this.wave>60000+this.timer){this.roC=0;}
 
 
       }
