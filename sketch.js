@@ -117,7 +117,7 @@ class CagedBubble {
     push()
     stroke(255)
     noStroke()
-    fill((color(255,0,0,255/(this.dist/50))))
+    fill((color(255,0,0+this.roC*10,255/(this.dist/50))))
     ellipse(this.xC2,this.yC2,this.rC2)
     pop()
   }
@@ -254,7 +254,7 @@ class BgBubble {
     stroke(255)
     noStroke()
 
-    fill(lerpColor(color(255,0,0,100),color(0,0,255,100), this.age/250))
+    fill(lerpColor(color(255,0,255,100),color(0,0,255,100), this.age/250))
 
     ellipse(this.x,this.y,this.r)
     pop()
